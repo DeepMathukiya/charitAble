@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <title>Home Page</title>
+    
+    <style>
+      body{
+        background: url("1.mp4");
+       /* background-image: linear-gradient(276deg, #171655 0%, #000000 74%); */
+      }
+      h2 {
+        color: white;
+      }
+      p{
+        color: #fff;
+      }
+    
+      h2 {
+        margin-top: 0em;
+        font-size:medium;
+        text-align: center;
+        
+      }
+  
+.buttonBlock{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-row: auto ;
+margin: 3px;
+
+}
+      .btn {
+       text-align: center;
+        margin-right: 10px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      
+      .btn-primary {
+       height: 40px;
+       width: 200px;
+        background-color: #038129;
+      }
+      
+      .btn-secondary {
+        height: 40px;
+       width: 200px;
+        background-color: #2338f7fa;
+      }
+      
+.banner{
+  width: 100%;
+  height: 100vh;
+  /* background-image: linear-gradient(276deg, #171655 0%, #000000 74%); */
+
+  background: url("1.mp4");
+}
+
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+.content h1{
+  font-size: 60px;
+  margin-top: 80px;
+}
+.content p{
+  margin: 40px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+
+}
+
+@keyframes round-robin {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-60px); }
+      }
+      .typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  /* border-right: .15em solid rgb(255, 255, 255); The typewriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .1em; /* Adjust as needed */
+  animation:
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  /* 50% { border-color: rgb(255, 255, 255) } */
+}
+h1{
+  text-align: center;
+  font-size: 60px;
+  color: white;
+}
+h3{
+  color: white;
+}
+/* Chatbot */
+.chat_icon{
+  position: fixed;
+  right: 30px;
+  bottom: 0;
+  font-size: 80px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1000;
+}
+.chat_box{
+  position: fixed;
+  right: 20px;
+  bottom: 100px;
+  width: 400px;
+  height: 80vh;
+  background: #fff;
+  z-index: 1000;
+  transition: all 0.3s ease-out;
+  transform: scaleY(0);
+}
+.chat_box.active{
+   transform: scaleY(1);
+}
+.hidden{
+  display: none !important;
+}
+.conv-form-wrapper textarea{
+  height: 30px;
+  overflow: hidden;
+  resize: none;
+}
+#messages{
+  padding: 20px;
+}
+</style>
+<link rel="stylesheet" href="jquery.convform.css">
+<script type="text/javascript" src="jquery-3.6.4.min.js"></script>
+<script type="text/javascript" src="custom.js"></script>
+<script type="text/javascript" src="jquery.convform.js"></script>
+</head>
+<body>
+
+  
+    <div class="banner">
+     
+      <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+          <h3>  OS VIRTUAL LAB</h3>
+          <a class="navbar-brand" href="#"><script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+            <lord-icon
+                src="https://cdn.lordicon.com/hjbsbdhw.json"
+                trigger="hover"
+                style="width:40px;height:40px ;padding-right:30px;padding-left:10px;padding-right: 10px;">
+            </lord-icon>           </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="#">
+                  <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+<lord-icon
+    src="https://cdn.lordicon.com/zthozvfn.json"
+    trigger="hover"
+    colors="primary:#000000,secondary:#4bb3fd,tertiary:#faddd1,quaternary:#000000"
+    state="hover-jump"
+    style="width:40px;height:40px ;padding-right:30px;padding-left:10px;padding-right: 10px;">
+</lord-icon></a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+                  <lord-icon
+                      src="https://cdn.lordicon.com/dxoycpzg.json"
+                      trigger="morph"
+                      style="width:40px;height:40px ;padding-right:30px;padding-left:10px;padding-right: 10px;">
+                  </lord-icon>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Round - Robin </a></li>
+                  <li><a class="dropdown-item" href="#">Bankers Algorithm</a></li>
+                  <li><a class="dropdown-item" href="#">Scan/ Scan - C </a></li>
+                  <li><a class="dropdown-item" href="#">MRU Algorithm</a></li>
+                </ul>
+              </li>
+              
+          </div>
+        </div>
+      </nav>
+        </div>
+
+        <div class="content">
+          
+<h1> <div class="typewriter">SCHEDULING ALGORITHMS <br> IMPLEMENTATION</div> </h1>
+          <p>A Process Scheduler schedules different processes to be assigned to the CPU based on particular scheduling algorithms. These algorithms are either non-preemptive or preemptive. Non-preemptive algorithms are designed so that once a process enters the running state, it cannot be preempted until it completes its allotted time, whereas the preemptive scheduling is based on priority where a scheduler may preempt a low priority running process anytime when a high priority process enters into a ready state.  
+            </p>
+            <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+              IMPLEMENT NOW!
+            </a>
+            
+            <div class="offcanvas offcanvas-start" tabindex="1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel">IMPLEMENTATION</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body ">
+                <div>
+                 Here is the proper Implementation of all the algorithms which includes Round-Robin algorithm, Bankers algorithm, Scan/Scan - C algorithm and Most Recently Used Algorithm and for proper understanding it includes graphs and examples where required. 
+                </div>
+                <div class="dropdown mt-3">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                    Algorithms
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Round - Robin </a></li>
+                    <li><a class="dropdown-item" href="#">Bankers Algorithm</a></li>
+                    <li><a class="dropdown-item" href="#">Scan/ Scan - C </a></li>
+                    <li><a class="dropdown-item" href="#">MRU Algorithm</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+     <!-- chatbot-->   
+     <div class = "chat_icon" >
+      <img src="chatlogojpg.jpg" alt="" style="width: 60px; height: 60px; border-radius: 50%;">
+     </div>
+     <div class="chat_box">
+      <div id="chat" class="conv-form-wrapper">
+   <form action="" method="GET"  class="hidden">
+    <select name="category" data-conv-question="Hello! How can I help you!">
+      <option value="Doc">I want Study</option>
+      <option value="Nothing">Nothing!</option>
+    </select>
+    <div data-conv-fork="category">
+      <div data-conv-case="Nothing">
+         <input type="text" data-conv-question="Thanks For Visiting!">
+      </div>
+      <div data-conv-case="Doc">
+        <select name="category" data-conv-question="Study Algorithm with us!">
+          <option value="round">Round-Robin</option>
+          <option value="MRU">MRU</option>
+          <option value="Bankers">Bankers</option>
+          <option value="Scan">Scan/Scan-C</option>
+        </select>
+        <div data-conv-fork="category">
+          <div data-conv-case="round">
+            <select name="category" data-conv-question="Round robin is a scheduling algorithm that assigns time slices to each process in a cyclic order, regardless of the priority of the process. Each process is given a fixed amount of time to execute before the algorithm moves on to the next process in the queue. If a process finishes executing within its allocated time slice, it is removed from the queue. If a process does not finish within its time slice, it is preempted and placed at the back of the queue, where it will receive another time slice during the next cycle. Round robin is a simple and fair scheduling algorithm that ensures all processes get a chance to execute, but it may not be the best choice for systems with real-time constraints or high-priority processes.">
+              <option value="MRU">MRU</option>
+              <option value="Bankers">Bankers</option>
+              <option value="Scan">Scan/Scan-C</option>
+              <option value="end">End</option>
+            </select>
+          </div>
+          <div data-conv-case="MRU">
+            <select name="category" data-conv-question="MRU, or Most Recently Used, is a page replacement algorithm used by the operating system to manage memory when a page fault occurs. MRU replaces the page that has not been accessed for the longest period of time, based on the assumption that pages that have been accessed recently are more likely to be accessed again in the near future. MRU keeps track of the last time each page was accessed, and when a page fault occurs, it replaces the page that was accessed the longest time ago. While MRU can be effective in reducing the number of page faults, it can also lead to unnecessary page replacements if a page is accessed infrequently but still needed in the future.">
+              <option value="round">Round-Robin</option>
+              <option value="Bankers">Bankers</option>
+              <option value="Scan">Scan/Scan-C</option>
+              <option value="end">End</option>
+            </select>
+         </div>
+         <div data-conv-case="Bankers">
+          <select name="category" data-conv-question="Banker's algorithm is a deadlock avoidance algorithm used in operating systems to ensure that the resources required by a process can be safely allocated without causing a deadlock. It works by simulating the allocation of resources to all processes in the system, and determining whether or not this allocation would lead to a safe state. A safe state is one where all processes can complete their execution without getting stuck in a deadlock. If the requested resource allocation would lead to a safe state, it is granted. Otherwise, the process is blocked until the requested resources become available. Banker's algorithm is a conservative approach to resource allocation, but it can be effective in preventing deadlocks in systems with limited resources.">
+            <option value="round">Round-Robin</option>
+            <option value="MRU">MRU</option>
+            <option value="Scan">Scan/Scan-C</option>
+            <option value="end">End</option>
+          </select>
+       </div>
+       <div data-conv-case="Scan">
+        <select name="category" data-conv-question="Scan and C-Scan are disk scheduling algorithms used in operating systems to control the order in which disk read/write operations are executed. The Scan algorithm works by moving the disk arm in one direction, servicing all the requests in that direction before reversing direction and servicing the requests in the opposite direction. The C-Scan algorithm is similar, but instead of reversing direction at the end of the disk, it returns to the beginning of the disk and starts servicing requests again. Both algorithms can be effective in reducing disk head movements and improving disk access times, but they may not be suitable for all disk access patterns. In C language, the implementation of these algorithms involves creating a request queue, sorting the requests in order of increasing disk cylinder number, and then iterating through the queue to service each request in the appropriate order.">
+          <option value="round">Round-Robin</option>
+          <option value="MRU">MRU</option>
+          <option value="Bankers">Bankers</option>
+          <option value="end">End</option>
+        </select>
+     </div>
+     <div data-conv-case="end">
+      <input type="hidden" data-conv-question="Thanks For Visiting!">
+   </div>
+      </div>
+    </div>
+   </form>
+  </div>
+     </div>
+<!-- chatbot-->  
+
+          <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+          <script>
+              var typingEffect = new Typed(".multiText",{
+                  strings : [" SCHEDULING ALGORITHMS IMPLEMENTATION" , " SCHEDULING ALGORITHMS IMPLEMENTATION", " SCHEDULING ALGORITHMS IMPLEMENTATION"],
+                  loop : true,
+                  typeSpeed:20,
+                  backspeed : 20,
+                  backDelay: 1400
+              }
+              )
+          </script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+     
+</body>
+</html>
